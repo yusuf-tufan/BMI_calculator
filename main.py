@@ -34,12 +34,12 @@ def bmi_calcualte():
         lb.config(width=50,height=5, bg='limegreen', fg='black', font=('Arial', 11, 'bold', 'italic'))
         lb.place(x=700, y=250)
 
-    elif 25.0<= bmi1<=29.9:
+    elif 24.91<= bmi1<=29.9:
         lb = Label(window, text=f'Overweight\nYour BMI : {'%.2f' % bmi1}\nHİGH')
         lb.config(width=50,height=5, bg='yellow', fg='black', font=('Arial', 11, 'bold', 'italic'))
         lb.place(x=700, y=250)
 
-    elif 30.0<=bmi1<=39.9:
+    elif 30.01<=bmi1<=39.9:
         lb = Label(window, text=f'Obese\nYour BMI : {'%.2f' % bmi1}\nVERY HİGH')
         lb.config(width=50,height=5, bg='dark orange', fg='black', font=('Arial', 11, 'bold', 'italic'))
         lb.place(x=700, y=250)
