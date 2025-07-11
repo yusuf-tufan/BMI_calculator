@@ -3,9 +3,10 @@ from PIL import ImageTk, Image
 
 window=Tk()
 window.title("BMI Calculator")
-window.configure(bg='white')
+window.configure(bg='#ffffca')
 window.minsize(width=1400,height=1080)
 
+#image
 img = Image.open("BMI index1.jpg")
 resized=img.resize((550,400),Image.Resampling.LANCZOS)
 itk=ImageTk.PhotoImage(resized)
@@ -23,7 +24,7 @@ def bmi_calcualte():
         user_kg=int(user_kg)
         user_cm=int(user_cm)
     except:
-        lb = Label(window, text='Enter True Numbers...')
+        lb = Label(window, text='Enter True Informations...')
         lb.config(width=50, height=5, bg='red', fg='black', font=('Arial', 11, 'bold', 'italic'))
         lb.place(x=700, y=250)
         return
