@@ -19,7 +19,7 @@ A simple and user-friendly **BMI (Body Mass Index) Calculator** built with **Pyt
 ---
 ## ⚙️ How It Works
 
-1. User enters their **weight (kg)** and **height (cm or m)**.
+1. User enters their **weight (kg)** and **height (cm)**.
 2. The app validates the input using message boxes.
 ---
 
