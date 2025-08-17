@@ -70,16 +70,31 @@ kg_label.place(x=700,y=100)
 cm_label=Label(text='Enter In Your Height(cm):',bg='light green',fg='black',font=("Arial",11,'italic'))
 cm_label.place(x=700,y=150)
 
+
+enter_size=StringVar()
 #enter kg
-scale_kg=Entry(width=10)
+scale_kg=Entry(width=10,textvariable=enter_size)
 scale_kg.config(bg='light green',font=('Arial',11,'bold','italic'))
 scale_kg.focus()
 scale_kg.place(x=885,y=101)
 
+enter_len=StringVar()
 #enter cm
-scale_cm=Entry(width=10)
+scale_cm=Entry(width=10,textvariable=enter_len)
 scale_cm.config(bg='light green',font=('Arial',11,'bold','italic'))
 scale_cm.place(x=885,y=151)
+
+#control enteries limit
+def character_limit(enter_size):
+    if len(enter_size.get())>3:
+        enter_size.set('')
+enter_size.trace('w',lambda *args: character_limit(enter_size))
+
+def character_size(enter_len):
+    if len(enter_len.get())>3:
+        enter_len.set('')
+enter_len.trace('w',lambda *args: character_size(enter_len))
+
 
 #button
 calculator_button=Button(text='Calculate BMI',bg='orange',font=('Arial',11,'italic'),command=bmi_calcualte)
